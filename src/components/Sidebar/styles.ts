@@ -88,7 +88,7 @@ export const ItemSession = styled.div<ItemProps> `
   display: flex;
   align-items: center;
 
-  background: ${({ isSelected }) => isSelected ? '#cbd61e' : ''};
+  background: ${({ theme, isSelected }) => isSelected && theme.colors.verdeCagece};
   color: ${({ theme, isSelected }) => isSelected ? '#FFF' : theme.colors.background};
   transition: 0.2s ease-in;
 
