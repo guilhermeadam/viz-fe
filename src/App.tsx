@@ -10,6 +10,7 @@ import Router from './Router';
 import Sidebar from './components/Sidebar';
 
 export default function App() {
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={DefaultTheme}>

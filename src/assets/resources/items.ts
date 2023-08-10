@@ -21,13 +21,13 @@ export const items = [
         name: 'Home',
         path: '/',
         Icon: FiCoffee,
-        dev: true,
+        dev: false,
       },
       {
         name: 'Analyzer',
         path: '/analyzer',
         Icon: FiBox,
-        dev: true,
+        dev: false,
       },
       {
         name: 'Dashboard',

@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   padding: 16px;
 
-  background: linear-gradient(180deg, rgba(0,159,227,1) 25%, rgba(203,214,30,1) 100%);
+  background: linear-gradient(180deg, rgba(0,159,227,1) 5%, rgba(203,214,30,1) 100%);
 `;
 
 export const User = styled.div`

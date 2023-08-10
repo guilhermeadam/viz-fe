@@ -2,6 +2,7 @@ export default {
   colors: {
     verdeCagece: '#cbd61e',
     azulCagece: '#2DA3F2',
+    azulDarkCagece: '#0F2B5B',
     background: '#FFFFFF',
     gray: {
       50: '#f5f6f6',
