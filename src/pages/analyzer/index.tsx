@@ -22,7 +22,6 @@ export default function Analyzer() {
 
   const filteredResources = analyzerResources.filter((resource) => resource.viz_rec_cod_modulo === filteredModule);
 
-
   return (
     <Container>
       <PageHeader

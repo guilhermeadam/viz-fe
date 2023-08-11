@@ -1,17 +1,16 @@
+import { CardContainer } from './styles';
+
 import Container from '../../components/Container';
 import PageHeader from '../../components/PageHeader';
 import Card from '../../components/Card';
 
-import { CardContainer } from './styles';
 import { FiSun } from 'react-icons/fi';
-
 
 import { resources } from '../../mocks/resources';
 
 import { CODE_DOCUMENTATION } from '../../assets/resources/code';
 
 export default function Documentation() {
-
 
   const documentationResources = resources.filter((resource) => resource.viz_rec_dsc_status_recurso === 'ativo' && resource.viz_tre_cod_tipo_recurso === CODE_DOCUMENTATION);
 

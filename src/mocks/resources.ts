@@ -5,7 +5,7 @@ export const resources = [
     'viz_rec_dsc_nome_recurso' : 'Nova Consulta Analítica',
     'viz_rec_dsc_recurso' : 'Nova Consulta Analítica',
     'viz_rec_dsc_status_recurso' : 'ativo',
-    'viz_rec_dsc_path' : 'apireposxanalyzerserviceselectSchema',
+    'viz_rec_dsc_path' : 'api/repos/xanalyzer/service/selectSchema',
     'viz_rec_cod_modulo' : 0,
     'viz_rec_cod_cubo' : -101,
     'viz_rec_dsc_role' : 'Authenticated'
@@ -16,7 +16,7 @@ export const resources = [
     'viz_rec_dsc_nome_recurso' : 'Validação Módulo',
     'viz_rec_dsc_recurso' : 'Validação DataMart - Consulta Validação',
     'viz_rec_dsc_status_recurso' : 'inativo',
-    'viz_rec_dsc_path' : 'sei#processosvalidacao',
+    'viz_rec_dsc_path' : '/sei/#/processos/validacao',
     'viz_rec_cod_modulo' : 0,
     'viz_rec_cod_cubo' : -101,
     'viz_rec_dsc_role' : 'Authenticated'
@@ -27,7 +27,7 @@ export const resources = [
     'viz_rec_dsc_nome_recurso' : 'Liberação Módulo',
     'viz_rec_dsc_recurso' : 'Liberação DataMart - Consulta Liberação',
     'viz_rec_dsc_status_recurso' : 'inativo',
-    'viz_rec_dsc_path' : 'sei#processosliberacao',
+    'viz_rec_dsc_path' : '/sei/#/processos/liberacao',
     'viz_rec_cod_modulo' : 0,
     'viz_rec_cod_cubo' : -101,
     'viz_rec_dsc_role' : 'Authenticated'
@@ -731,7 +731,7 @@ export const resources = [
     'viz_rec_dsc_nome_recurso' : 'Acesso SEI-SA2',
     'viz_rec_dsc_recurso' : 'Guia de solicitações de acesso ao sistema sei',
     'viz_rec_dsc_status_recurso' : 'ativo',
-    'viz_rec_dsc_path' : 'pentahoapirepos%3Ahome%3Asei%3ADocumentacao%20Pentaho%20EE%3AAcesso%20SEI-SA2.pdfcontent',
+    'viz_rec_dsc_path' : '/pentaho/api/repos/%3Ahome%3Asei%3ADocumentacao%20Pentaho%20EE%3AAcesso%20SEI-SA2.pdf/content',
     'viz_rec_cod_modulo' : 0,
     'viz_rec_cod_cubo' : -101,
     'viz_rec_dsc_role' : 'Authenticated'

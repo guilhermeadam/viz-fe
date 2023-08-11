@@ -1,5 +1,7 @@
 import { Container, TitleContainer } from './styles';
 
+import { handleOpenResource } from '../../utils/handleOpenResource';
+
 interface CardProps {
   title: string;
   description: string;
@@ -10,8 +12,9 @@ interface CardProps {
 export default function Card({
   title, description, path, icon
 }: CardProps) {
+
   return (
-    <Container onClick={() => console.log(path)}>
+    <Container onClick={() => handleOpenResource(title, description, path)}>
       <TitleContainer>
         {icon}
         <strong>{title}</strong>
