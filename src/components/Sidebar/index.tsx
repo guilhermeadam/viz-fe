@@ -25,7 +25,7 @@ export default function Sidebar() {
     setSelectedItem(name);
   }
 
-  const isAdmin = true;
+  const isAdmin = false;
 
   return (
     <Container>
