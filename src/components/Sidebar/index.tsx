@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -17,15 +17,37 @@ import avatar from '../../assets/images/avatar.svg';
 import { FiBell } from 'react-icons/fi';
 
 import { items } from '../../assets/resources/items';
+import { pentaho } from '../../services/api';
+import { parseCDF } from '../../utils/parseCDF';
 
 export default function Sidebar() {
   const [selectedItem, setSelectedItem] = useState('Home');
+  const [user, setUser] = useState('');
+  const [roles, setRoles] = useState('');
+
+  useEffect(() => {
+    (async () => {
+      
+      try {
+
+        const response = await pentaho.get('plugin/pentaho-cdf/api/cdf-embed.js');
+        const parsedResponse = await parseCDF(response.data);
+
+        setUser(parsedResponse.user);
+        setRoles(parsedResponse.roles);
+
+      } catch(error) {
+        console.log('$Error: ', error);
+      }
+
+    })();
+  }, []);
 
   function handleSelectItem(name: string) {
     setSelectedItem(name);
   }
 
-  const isAdmin = false;
+  const isAdmin = roles.includes('Administrator');
 
   return (
     <Container>
@@ -33,7 +55,7 @@ export default function Sidebar() {
       <User>
         <UserAvatar src={avatar} />
         <UserProfile>
-          <strong>215433</strong>
+          <strong>{user}</strong>
           <span>GETIC-SIS</span>
         </UserProfile>
         <Link to='/notification'>

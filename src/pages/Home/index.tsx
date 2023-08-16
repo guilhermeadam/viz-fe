@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import Container from '../../components/Container';
 import PageHeader from '../../components/PageHeader';
 
@@ -6,14 +8,28 @@ import {
 } from './styles';
 
 import avatar from '../../assets/images/avatar.svg';
+import { pentaho } from '../../services/api';
+import { parseCDF } from '../../utils/parseCDF';
 
 export default function Home() {
+  const [roles, setRoles] = useState<string[] | null>();
 
-  const user = {
-    name: '215433',
-    management: 'GETIC-SIS',
-    roles: ['Administrator', 'GRUPO_SEI_DESENVOLVEDOR', 'GRUPO_SEI_GESTOR', 'GRUPO_SEI_GECAD_VALIDACAO', 'GRUPO_SEI_GECAD_CONSULTA', 'GRUPO_SEI_GECAD_LIBERADO']
-  };
+  useEffect(() => {
+
+    (async () => {
+      try {
+
+        const response = await pentaho.get('plugin/pentaho-cdf/api/cdf-embed.js');
+        const parsedResponse = await parseCDF(response.data);
+
+        setRoles(parsedResponse.roles);
+
+      } catch(error) {
+        console.log('$Error: ', error);
+      }
+    }) ();
+
+  }, []);
 
   return (
     <Container>
@@ -24,7 +40,7 @@ export default function Home() {
 
         <UserAvatar src={avatar} />
         <UserProfile>
-          {user.roles.map((role) => (
+          {roles?.map((role) => (
             <TagName key={role}>
               <strong>{role.toUpperCase()}</strong>
             </TagName>
